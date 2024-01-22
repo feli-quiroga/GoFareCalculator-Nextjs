@@ -1,33 +1,93 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: rgb(172, 234, 172);
+  text-align: center;
+  display: flexbox;
+  justify-content: center;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+
+}
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.container-narrow {
+  width: 50%;
+}
+.container-400 {
+  width: 400px;
+}
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  justify-content: center;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+input, select, button {
+  text-align: center;
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px; /* Add rounded corners to form elements */
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 8px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+select::after {
+  content: '\25BC'; /* Unicode character for down arrow */
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+button {
+  background-color: #4caf50;
+  cursor: pointer;
+  /* Add more styles as needed for your button */
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/*CSS for Footer*/
+.bottom-footer {
+  margin-top: auto;
+  padding: 10px;
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-info,
+.social-links {
+  margin-right: 30px; /* Adjust spacing between sections */
+}
+.social-links {
+  display: flex;
+  justify-content: flex-end;
+}
+.less-height {
+line-height: 0.4;
 }
